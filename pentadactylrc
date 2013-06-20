@@ -1,0 +1,188 @@
+set! network.http.use-cache=true
+set! extensions.shownSelectionUI=true
+set! extensions.autoDisableScopes=6
+set! general.smoothScroll=false
+set! app.update.enabled=false
+set! app.update.channel=release
+set! toolkit.telemetry.enabled=false
+set! toolkit.telemetry.prompted=2
+set! toolkit.telemetry.rejected=true
+set! app.update.interval=604800
+set! browser.zoom.updateBackgroundTabs=false
+set! browser.sessionstore.enabled=true
+set! browser.tabs.loadOnNewTab=0
+set! browser.tabs.loadInBackground=true
+set! browser.tabs.animate=false
+set! browser.sessionstore.resume=true
+set! browser.sessionstore.restore_on_demand=true
+set! browser.startup.page=3
+set! browser.display.use_document_fonts=0
+set! font.default.x-western=sans-serif
+set! font.name.sans-serif.x-western=Ubuntu
+set! font.name.serif.x-western=Ubuntu
+"set! font.minimum-size.x-western=16
+set! font.minimum-size.x-western=13
+set! font.size.fixed.x-western=18
+set! font.size.variable.x-western=18
+set! browser.download.dir=/home/shane/home/downloads
+set! browser.download.lastDir=/home/shane/home/downloads
+set! extensions.dactyl.original.browser.tabs.loadInBackground=true
+set! extensions.dactyl.saved.browser.tabs.loadInBackground=true
+set! browser.sessionstore.resume_from_crash=true
+set! browser.download.manager.scanWhenDone=false
+set! privacy.clearOnShutdown.cache=false
+set! privacy.clearOnShutdown.cookies=false
+set! privacy.clearOnShutdown.downloads=false
+set! privacy.clearOnShutdown.formdata=false
+set! privacy.clearOnShutdown.history=false
+set! privacy.clearOnShutdown.offlineapps=false
+set! privacy.clearOnShutdown.passwords=false
+set! privacy.clearOnShutdown.sessions=false
+set! privacy.clearOnShutdown.sitesettings=false
+set! privacy.cpd.cache=false
+set! privacy.cpd.cookies=false
+set! privacy.cpd.downloads=false
+set! privacy.cpd.formdata=false
+set! privacy.cpd.history=false
+set! privacy.cpd.offlineapps=false
+set! privacy.cpd.passwords=false
+set! privacy.cpd.sessions=false
+set! privacy.cpd.sitesettings=false
+set! browser.download.manager.showWhenStarting=false
+set! browser.download.manager.showAlertOnComplete=false
+set! browser.download.manager.retention=2
+set! plugins.hide_infobar_for_outdated_plugin=true
+set! nightly.templates.title="${Name} ${Profile}"
+set! network.prefetch-next=false
+set! network.proxy.socks_remote_dns=true
+set! bym.bkg="#FFFFFF"
+set! bym.form=true
+set! bym.fxbkg="#FFFFFF"
+set! bym.fxlink="#000099"
+set! bym.fxtext="#000000"
+set! bym.fxvlink="#993399"
+set! bym.key="B"
+set! bym.link="#999999"
+" do not want to enable bym every time i start firefox
+"set! bym.status="1"
+set! bym.text="#666666"
+set! bym.usc="0"
+set! bym.vlink="#666666"
+set! layout.spellcheckDefault=0
+
+silent extdisable 0 jQuery
+silent extenable Adblock Plus
+silent extenable Blank Your Monitor + Easy Reading
+silent extenable CSS Reloader
+silent extenable keyconfig
+silent extenable Nightly Tester Tools
+silent extenable Search By Image (by Google)
+silent extenable User Agent Switcher
+silent extenable Session Manager
+silent extenable Google Translator for Firefox
+silent extdisable Tab Mix Plus
+
+if config.profileName == "facebook_kiana"
+    silent extenable Personas
+else
+    silent extdisable Personas
+endif
+if config.profileName == "web_development"
+    set! network.http.use-cache=false
+    silent extenable Web Developer
+    silent extenable CodeBurner for Firebug
+else
+    silent extdisable Web Developer
+    silent extdisable CodeBurner for Firebug
+endif
+
+colorscheme zenburn
+
+map -builtin ; :
+map -builtin : ;
+set go=
+set showtabline=never
+nmap a ;open wolfram-alpha 
+nmap A ;tabnew wolfram-alpha 
+nmap w ;open wikipedia-en 
+nmap W ;tabnew wikipedia-en 
+nmap q ;open google-i-m-feeling-lucky 
+nmap Q ;tabnew google-i-m-feeling-lucky 
+nmap e ;open thepiratebay-ssl 
+nmap E ;tabnew thepiratebay-ssl 
+nmap R ;tabnew trade-me-nz 
+nmap B ;tabnew bbc-news 
+nmap m ;open google-maps-nz 
+nmap M ;tabnew google-maps-nz 
+nmap U ;tabnew urban-dictionary 
+
+" can't get this to work
+"switch (liberator.profileName) {
+"    case 'non-secure':
+"        set private
+"        break;
+"}
+
+" need the explicitly set this as default
+set! browser.privatebrowsing.autostart=false
+
+if config.profileName == "non-secure"
+    set! bym.status="1"
+    " needed for ff 19-
+    set private
+    " needed for ff 20+
+    set! browser.privatebrowsing.autostart=true
+    set defsearch=dogpile
+    set! network.prefetch-next=false
+    set! network.proxy.socks_remote_dns=true
+    "set! network.proxy.socks="localhost"
+    "set! network.proxy.socks_port=9050
+    "set! network.proxy.type=0
+endif
+
+if config.profileName == "youtube"
+    set defsearch=youtube
+endif
+
+if config.profileName == "forget"
+    set private
+    set! browser.privatebrowsing.autostart=true
+    set defsearch=dogpile
+endif
+
+if config.profileName == "movies"
+    set defsearch=imdb
+    nmap a ;open http://www.hoyts.co.nz/movies/now_on_sale.aspx<CR>
+    nmap A ;tabnew http://www.hoyts.co.nz/movies/now_on_sale.aspx<CR>
+    nmap z ;open http://www.rialto.co.nz/cinemas/rialto-cinemas-dunedin.aspx<CR>
+    nmap Z ;tabnew http://www.rialto.co.nz/cinemas/rialto-cinemas-dunedin.aspx<CR>
+endif
+
+if config.profileName == "aoe2w" || config.profileName == "aoe2m"
+    set guioptions+=B
+endif
+"set editor='gvim -f +<line> +"sil! call cursor(0, <column>)" <file>'
+"gvim.sh does not like the above double quotes. that's why the above doesn't work
+"set editor="gvim -f +<line> +'sil! call cursor(0, <column>)' +'set ft=html' <file>"
+"set editor="gvim -f +<line> <file>"
+"set editor="/home/shane/local/bin/gvim -f +<line> +\"sil! call cursor(0, <column>)\" +\"set ft=html\" <file>"
+"set editor="/home/shane/local/bin/gvim -f +<line> +'sil! call cursor(0, <column>)' +'set ft=html' <file>"
+
+"set editor="osascript -e 'tell application \"Terminal\" to do script (\"/Users/shane/local/bin/wrappers/pgvim.sh <line> <column> <file>; exit\") activate'"
+set editor="pgvim.sh <line> <column> <file>"
+
+map -g user <C-o> -js $(window)._document.body.contentEditable=$(window)._document.body.contentEditable=='true'?$(window)._document.body.contentEditable='false':$(window)._document.body.contentEditable='true'
+imap <C-o> -js $(window)._document.body.contentEditable=$(window)._document.body.contentEditable=='true'?$(window)._document.body.contentEditable='false':$(window)._document.body.contentEditable='true'
+tmap <C-o> -js $(window)._document.body.contentEditable=$(window)._document.body.contentEditable=='true'?$(window)._document.body.contentEditable='false':$(window)._document.body.contentEditable='true'
+nmap <C-o> -js $(window)._document.body.contentEditable=$(window)._document.body.contentEditable=='true'?$(window)._document.body.contentEditable='false':$(window)._document.body.contentEditable='true'
+vmap <C-o> -js $(window)._document.body.contentEditable=$(window)._document.body.contentEditable=='true'?$(window)._document.body.contentEditable='false':$(window)._document.body.contentEditable='true'
+omap <C-o> -js $(window)._document.body.contentEditable=$(window)._document.body.contentEditable=='true'?$(window)._document.body.contentEditable='false':$(window)._document.body.contentEditable='true'
+"map -g user <C-l> <ESC><ESC>;open javascript:document.body.contentEditable%20=%20'true';%20document.designMode='on';%20void%200<CR>i<TAB>
+"vmap <C-l> <ESC><ESC>;open javascript:document.body.contentEditable%20=%20'true';%20document.designMode='on';%20void%200<CR>i<TAB>
+"imap <C-l> <ESC><ESC>;open javascript:document.body.contentEditable%20=%20'true';%20document.designMode='on';%20void%200<CR>i<TAB>
+"nmap <C-l> <ESC><ESC>;open javascript:document.body.contentEditable%20=%20'true';%20document.designMode='on';%20void%200<CR>i<TAB>
+"tmap <C-l> <ESC><ESC>;open javascript:document.body.contentEditable%20=%20'true';%20document.designMode='on';%20void%200<CR>i<TAB>
+"omap <C-l> <ESC><ESC>;open javascript:document.body.contentEditable%20=%20'true';%20document.designMode='on';%20void%200<CR>i<TAB>
+
+map -b j 5j
+map -b k 5k
