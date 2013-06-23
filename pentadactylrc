@@ -191,3 +191,6 @@ omap <C-o> -js $(window)._document.body.contentEditable=$(window)._document.body
 
 map -b j 5j
 map -b k 5k
+
+set showmode=!caret,!output_multiline,!normal,!base,!operator
+set showstatuslinks=
