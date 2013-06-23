@@ -10,6 +10,7 @@ set! toolkit.telemetry.rejected=true
 set! app.update.interval=604800
 set! browser.zoom.updateBackgroundTabs=false
 set! browser.sessionstore.enabled=true
+set! browser.tabs.onTop=true
 set! browser.tabs.loadOnNewTab=0
 set! browser.tabs.loadInBackground=true
 set! browser.tabs.animate=false
