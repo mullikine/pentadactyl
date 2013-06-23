@@ -186,5 +186,8 @@ omap <C-o> -js $(window)._document.body.contentEditable=$(window)._document.body
 "tmap <C-l> <ESC><ESC>;open javascript:document.body.contentEditable%20=%20'true';%20document.designMode='on';%20void%200<CR>i<TAB>
 "omap <C-l> <ESC><ESC>;open javascript:document.body.contentEditable%20=%20'true';%20document.designMode='on';%20void%200<CR>i<TAB>
 
+" this doesnt work but probably should
+"toolbarhide 'Add-on Bar'
+
 map -b j 5j
 map -b k 5k
