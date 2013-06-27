@@ -83,8 +83,12 @@ if config.profileName == "facebook_kiana"
 else
     silent extdisable Personas
 endif
-if config.profileName == "web_development"
+
+if config.profileName == "web_development" || config.profileName == "traclink"
     set! network.http.use-cache=false
+endif
+
+if config.profileName == "web_development"
     silent extenable Web Developer
     silent extenable CodeBurner for Firebug
 else
@@ -92,8 +96,7 @@ else
     silent extdisable CodeBurner for Firebug
 endif
 
-if config.profileName == "traclink"
-else
+if config.profileName == "traclink" || config.profileName == "test-traclink"
     set! browser.display.use_document_fonts=0
     "set! font.minimum-size.x-western=16
     set! font.minimum-size.x-western=13
