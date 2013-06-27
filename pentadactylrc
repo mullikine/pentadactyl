@@ -100,6 +100,10 @@ if config.profileName == "traclink" || config.profileName == "test-traclink"
     set! browser.display.use_document_fonts=0
     "set! font.minimum-size.x-western=16
     set! font.minimum-size.x-western=13
+    set! font.size.fixed.x-western=16
+    set! font.size.variable.x-western=16
+else
+    set! font.minimum-size.x-western=15
     set! font.size.fixed.x-western=18
     set! font.size.variable.x-western=18
 endif
