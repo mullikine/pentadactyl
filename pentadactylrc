@@ -206,3 +206,8 @@ map -b k 5k
 
 set showmode=!caret,!output_multiline,!normal,!base,!operator
 set showstatuslinks=
+
+if config.profileName == "test-traclink"
+    open http://chopper:6544/static/jasmine-tests/JasmineTestRunner.html
+endif
+
