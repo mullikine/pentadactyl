@@ -1,6 +1,7 @@
 set! network.http.use-cache=true
 set! extensions.shownSelectionUI=true
 set! extensions.autoDisableScopes=6
+set! extensions.checkCompatibility=false
 set! general.smoothScroll=false
 set! app.update.enabled=false
 set! app.update.channel=release
