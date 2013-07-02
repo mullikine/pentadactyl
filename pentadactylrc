@@ -17,6 +17,7 @@ set! browser.tabs.loadInBackground=true
 set! browser.tabs.animate=false
 set! browser.sessionstore.resume=true
 set! browser.sessionstore.restore_on_demand=true
+set! browser.startup.homepage="about:blank"
 set! browser.startup.page=3
 set! font.default.x-western=sans-serif
 set! font.name.sans-serif.x-western=Ubuntu
