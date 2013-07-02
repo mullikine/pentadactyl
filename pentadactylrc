@@ -129,6 +129,7 @@ nmap B ;tabnew bbc-news
 nmap m ;open google-maps-nz 
 nmap M ;tabnew google-maps-nz 
 nmap U ;tabnew urban-dictionary 
+nmap X x<CR>
 
 " can't get this to work
 "switch (liberator.profileName) {
