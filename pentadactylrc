@@ -86,7 +86,7 @@ else
     silent extdisable Personas
 endif
 
-if config.profileName == "web_development" || config.profileName == "traclink"
+if config.profileName == "web_development" || config.profileName == "traclink"|| config.profileName == "traclink-dev" || config.profileName == "test-traclink"
     set! network.http.use-cache=false
 endif
 
@@ -98,7 +98,7 @@ else
     silent extdisable CodeBurner for Firebug
 endif
 
-if config.profileName == "traclink" || config.profileName == "test-traclink"
+if config.profileName == "traclink" || config.profileName == "traclink-dev" || config.profileName == "test-traclink"
     set! browser.display.use_document_fonts=0
     "set! font.minimum-size.x-western=16
     set! font.minimum-size.x-western=13
@@ -205,11 +205,13 @@ omap <C-o> -js $(window)._document.body.contentEditable=$(window)._document.body
 
 map -b j 5j
 map -b k 5k
+map -b h 5h
+map -b l 5l
 
 set showmode=!caret,!output_multiline,!normal,!base,!operator
 set showstatuslinks=
 
 if config.profileName == "test-traclink"
-    open http://chopper:6544/static/jasmine-tests/JasmineTestRunner.html
+    open http://chopper.localnet:6544/static/jasmine-tests/JasmineTestRunner.html
 endif
 
