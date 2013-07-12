@@ -69,11 +69,11 @@ set! bym.vlink="#666666"
 set! layout.spellcheckDefault=0
 
 silent extdisable 0 jQuery
+silent extenable Nightly Tester Tools
 silent extenable Adblock Plus
 silent extenable Blank Your Monitor + Easy Reading
 silent extenable CSS Reloader
 silent extenable keyconfig
-silent extenable Nightly Tester Tools
 silent extenable Search By Image (by Google)
 silent extenable User Agent Switcher
 silent extenable Session Manager
@@ -104,6 +104,14 @@ if config.profileName == "traclink" || config.profileName == "traclink-dev" || c
     set! font.minimum-size.x-western=13
     set! font.size.fixed.x-western=16
     set! font.size.variable.x-western=16
+    silent extdisable Adblock Plus
+    silent extdisable Blank Your Monitor + Easy Reading
+    silent extdisable CSS Reloader
+    silent extdisable keyconfig
+    silent extdisable Search By Image (by Google)
+    silent extdisable User Agent Switcher
+    silent extdisable Session Manager
+    silent extdisable Google Translator for Firefox
 else
     set! font.minimum-size.x-western=15
     set! font.size.fixed.x-western=18
