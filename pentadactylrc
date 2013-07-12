@@ -78,6 +78,9 @@ silent extenable Search By Image (by Google)
 silent extenable User Agent Switcher
 silent extenable Session Manager
 silent extenable Google Translator for Firefox
+silent extenable DNS Flusher
+silent extenable DownloadHelper
+silent extenable Flash and Video Download
 silent extdisable Tab Mix Plus
 
 if config.profileName == "facebook_kiana"
@@ -107,11 +110,13 @@ if config.profileName == "traclink" || config.profileName == "traclink-dev" || c
     silent extdisable Adblock Plus
     silent extdisable Blank Your Monitor + Easy Reading
     silent extdisable CSS Reloader
-    silent extdisable keyconfig
     silent extdisable Search By Image (by Google)
     silent extdisable User Agent Switcher
     silent extdisable Session Manager
     silent extdisable Google Translator for Firefox
+    silent extdisable DNS Flusher
+    silent extdisable DownloadHelper
+    silent extdisable Flash and Video Download
 else
     set! font.minimum-size.x-western=15
     set! font.size.fixed.x-western=18
