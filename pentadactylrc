@@ -1,3 +1,4 @@
+set! javascript.enabled=true
 set! network.http.use-cache=true
 set! extensions.shownSelectionUI=true
 set! extensions.autoDisableScopes=6
@@ -226,5 +227,7 @@ set showstatuslinks=
 
 if config.profileName == "test-traclink"
     open http://chopper.localnet:6544/static/jasmine-tests/JasmineTestRunner.html
+    nmap s ;set! javascript.enabled=false<CR>
+    nmap w ;set! javascript.enabled=true<CR>
 endif
 
