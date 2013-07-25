@@ -130,6 +130,7 @@ map -builtin ; :
 map -builtin : ;
 set go=
 set showtabline=never
+nmap D ;tabnew youtube 
 nmap a ;open wolfram-alpha 
 nmap A ;tabnew wolfram-alpha 
 nmap w ;open wikipedia-en 
