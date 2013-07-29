@@ -145,6 +145,8 @@ nmap m ;open google-maps-nz
 nmap M ;tabnew google-maps-nz 
 nmap U ;tabnew urban-dictionary 
 nmap X x<CR>
+map <C-k> <Nop>
+map! <C-k> <Nop>
 
 " can't get this to work
 "switch (liberator.profileName) {
