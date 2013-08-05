@@ -80,8 +80,8 @@ silent extenable User Agent Switcher
 silent extenable Session Manager
 silent extenable Google Translator for Firefox
 silent extenable DNS Flusher
-silent extenable DownloadHelper
-silent extenable Flash and Video Download
+silent extdisable Flash and Video Download
+silent extdisable DownloadHelper
 silent extdisable Tab Mix Plus
 
 if config.profileName == "facebook_kiana"
