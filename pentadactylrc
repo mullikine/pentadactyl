@@ -69,17 +69,10 @@ set! bym.usc="0"
 set! bym.vlink="#666666"
 set! layout.spellcheckDefault=0
 
-if config.profileName == "localhost"
-    silent extenable Ubuntu Firefox Modifications
-    silent extenable Ubuntu Online Accounts
-    silent extenable Unity Desktop Integration
-    silent extenable Unity Websites integration
-else
-    silent extdisable Ubuntu Firefox Modifications
-    silent extdisable Ubuntu Online Accounts
-    silent extdisable Unity Desktop Integration
-    silent extdisable Unity Websites integration
-endif
+silent extdisable Ubuntu Firefox Modifications
+silent extdisable Ubuntu Online Accounts
+silent extdisable Unity Desktop Integration
+silent extdisable Unity Websites integration
 silent extdisable 0 jQuery
 silent extenable Nightly Tester Tools
 silent extenable Adblock Plus
