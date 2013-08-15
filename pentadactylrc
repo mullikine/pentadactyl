@@ -134,20 +134,32 @@ map -builtin ; :
 map -builtin : ;
 set go=
 set showtabline=never
-nmap D ;tabnew youtube 
-nmap a ;open wolfram-alpha 
-nmap A ;tabnew wolfram-alpha 
-nmap w ;open wikipedia-en 
-nmap W ;tabnew wikipedia-en 
-nmap q ;open google-i-m-feeling-lucky 
-nmap Q ;tabnew google-i-m-feeling-lucky 
-nmap e ;open thepiratebay-ssl 
-nmap E ;tabnew thepiratebay-ssl 
-nmap R ;tabnew trade-me-nz 
-nmap B ;tabnew bbc-news 
-nmap m ;open google-maps-nz 
-nmap M ;tabnew google-maps-nz 
-nmap U ;tabnew urban-dictionary 
+nmap ch gT
+nmap cl gt
+nmap wh H
+nmap wl L
+nmap wy ;tabnew youtube 
+nmap wY ;tabnew youtube 
+nmap wa ;open wolfram-alpha 
+nmap wA ;tabnew wolfram-alpha 
+nmap wk ;open wikipedia-en 
+nmap wK ;tabnew wikipedia-en 
+nmap wq ;open google-i-m-feeling-lucky 
+nmap wQ ;tabnew google-i-m-feeling-lucky 
+nmap we ;open thepiratebay-ssl 
+nmap wE ;tabnew thepiratebay-ssl 
+nmap wr ;open trade-me-nz 
+nmap wR ;tabnew trade-me-nz 
+nmap wB ;tabnew bbc-news 
+nmap wB ;tabnew bbc-news 
+nmap wm ;open google-maps-nz 
+nmap wM ;tabnew google-maps-nz 
+nmap wu ;open urban-dictionary 
+nmap wU ;tabnew urban-dictionary 
+nmap wt ;open http://www.hoyts.co.nz/movies/now_on_sale.aspx<CR>
+nmap wT ;tabnew http://www.hoyts.co.nz/movies/now_on_sale.aspx<CR>
+nmap wi ;open http://www.rialto.co.nz/cinemas/rialto-cinemas-dunedin.aspx<CR>
+nmap wI ;tabnew http://www.rialto.co.nz/cinemas/rialto-cinemas-dunedin.aspx<CR>
 nmap X x<CR>
 map <C-k> <Nop>
 "map! <C-k> <Nop>
@@ -188,10 +200,6 @@ endif
 
 if config.profileName == "movies"
     set defsearch=imdb
-    nmap a ;open http://www.hoyts.co.nz/movies/now_on_sale.aspx<CR>
-    nmap A ;tabnew http://www.hoyts.co.nz/movies/now_on_sale.aspx<CR>
-    nmap z ;open http://www.rialto.co.nz/cinemas/rialto-cinemas-dunedin.aspx<CR>
-    nmap Z ;tabnew http://www.rialto.co.nz/cinemas/rialto-cinemas-dunedin.aspx<CR>
 endif
 
 if config.profileName == "aoe2w" || config.profileName == "aoe2m"
