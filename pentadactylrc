@@ -138,7 +138,7 @@ nmap ch gT
 nmap cl gt
 nmap wh H
 nmap wl L
-nmap wy ;tabnew youtube 
+nmap wy ;open youtube 
 nmap wY ;tabnew youtube 
 nmap wa ;open wolfram-alpha 
 nmap wA ;tabnew wolfram-alpha 
@@ -150,7 +150,7 @@ nmap we ;open thepiratebay-ssl
 nmap wE ;tabnew thepiratebay-ssl 
 nmap wr ;open trade-me-nz 
 nmap wR ;tabnew trade-me-nz 
-nmap wB ;tabnew bbc-news 
+nmap wb ;open bbc-news 
 nmap wB ;tabnew bbc-news 
 nmap wm ;open google-maps-nz 
 nmap wM ;tabnew google-maps-nz 
