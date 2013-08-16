@@ -138,6 +138,8 @@ nmap ch gT
 nmap cl gt
 nmap wh H
 nmap wl L
+nmap wf ;open facebook 
+nmap wF ;tabnew facebook 
 nmap wy ;open youtube 
 nmap wY ;tabnew youtube 
 nmap wa ;open wolfram-alpha 
