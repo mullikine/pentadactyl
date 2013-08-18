@@ -162,8 +162,8 @@ nmap wu ;open urban-dictionary
 nmap wU ;tabnew urban-dictionary 
 nmap wt ;open http://www.hoyts.co.nz/movies/now_on_sale.aspx<CR>
 nmap wT ;tabnew http://www.hoyts.co.nz/movies/now_on_sale.aspx<CR>
-nmap wi ;open http://www.rialto.co.nz/cinemas/rialto-cinemas-dunedin.aspx<CR>
-nmap wI ;tabnew http://www.rialto.co.nz/cinemas/rialto-cinemas-dunedin.aspx<CR>
+nmap wl ;open http://www.rialto.co.nz/cinemas/rialto-cinemas-dunedin.aspx<CR>
+nmap wL ;tabnew http://www.rialto.co.nz/cinemas/rialto-cinemas-dunedin.aspx<CR>
 nmap X x<CR>
 map <C-k> <Nop>
 "map! <C-k> <Nop>
