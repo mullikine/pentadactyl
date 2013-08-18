@@ -160,6 +160,8 @@ nmap wm ;open google-maps-nz
 nmap wM ;tabnew google-maps-nz 
 nmap wu ;open urban-dictionary 
 nmap wU ;tabnew urban-dictionary 
+nmap wi ;open imdb 
+nmap wI ;tabnew imdb 
 nmap wt ;open http://www.hoyts.co.nz/movies/now_on_sale.aspx<CR>
 nmap wT ;tabnew http://www.hoyts.co.nz/movies/now_on_sale.aspx<CR>
 nmap wl ;open http://www.rialto.co.nz/cinemas/rialto-cinemas-dunedin.aspx<CR>
