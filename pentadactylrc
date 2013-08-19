@@ -140,43 +140,43 @@ nmap wh H
 nmap wl L
 nmap wg ;open gmail 
 nmap wG ;tabnew gmail 
-nmap Wg ;tabnew gmail 
+nmap Wg wG
 nmap wp ;open project-free-tv 
 nmap wP ;tabnew project-free-tv 
-nmap Wp ;tabnew project-free-tv 
+nmap Wp wP
 nmap wf ;open facebook 
 nmap wF ;tabnew facebook 
-nmap Wf ;tabnew facebook 
+nmap Wf wF
 nmap wy ;open youtube 
 nmap wY ;tabnew youtube 
-nmap Wy ;tabnew youtube 
+nmap Wy wY
 nmap wa ;open wolfram-alpha 
 nmap wA ;tabnew wolfram-alpha 
-nmap Wa ;tabnew wolfram-alpha 
+nmap Wa wA
 nmap wk ;open wikipedia-en 
 nmap wK ;tabnew wikipedia-en 
-nmap Wk ;tabnew wikipedia-en 
+nmap Wk wK
 nmap wq ;open google-i-m-feeling-lucky 
 nmap wQ ;tabnew google-i-m-feeling-lucky 
-nmap Wq ;tabnew google-i-m-feeling-lucky 
+nmap Wq wQ
 nmap we ;open thepiratebay-ssl 
 nmap wE ;tabnew thepiratebay-ssl 
-nmap We ;tabnew thepiratebay-ssl 
+nmap We wE
 nmap wr ;open trade-me-nz 
 nmap wR ;tabnew trade-me-nz 
-nmap Wr ;tabnew trade-me-nz 
+nmap Wr wR
 nmap wb ;open bbc-news 
 nmap wB ;tabnew bbc-news 
-nmap Wb ;tabnew bbc-news 
+nmap Wb wB
 nmap wm ;open google-maps-nz 
 nmap wM ;tabnew google-maps-nz 
-nmap Wm ;tabnew google-maps-nz 
+nmap Wm wM
 nmap wu ;open urban-dictionary 
 nmap wU ;tabnew urban-dictionary 
-nmap Wu ;tabnew urban-dictionary 
+nmap Wu wU
 nmap wi ;open imdb 
 nmap wI ;tabnew imdb 
-nmap Wi ;tabnew imdb 
+nmap Wi wI
 nmap wt ;open http://www.hoyts.co.nz/movies/now_on_sale.aspx<CR>
 nmap wT ;tabnew http://www.hoyts.co.nz/movies/now_on_sale.aspx<CR>
 nmap Wt ;tabnew http://www.hoyts.co.nz/movies/now_on_sale.aspx<CR>
