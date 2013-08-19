@@ -138,6 +138,8 @@ nmap ch gT
 nmap cl gt
 nmap wh H
 nmap wl L
+nmap wg ;open gmail 
+nmap wG ;tabnew gmail 
 nmap wp ;open project-free-tv 
 nmap wP ;tabnew project-free-tv 
 nmap wf ;open facebook 
