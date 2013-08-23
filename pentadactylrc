@@ -272,10 +272,10 @@ omap <C-o> -js $(window)._document.body.contentEditable=$(window)._document.body
 " this doesnt work but probably should
 "toolbarhide 'Add-on Bar'
 
-map -b j 5j
-map -b k 5k
-map -b h 5h
-map -b l 5l
+nmap -b j 5j
+nmap -b k 5k
+nmap -b h 5h
+nmap -b l 5l
 
 set showmode=!caret,!output_multiline,!normal,!base,!operator
 set showstatuslinks=
