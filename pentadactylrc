@@ -138,6 +138,10 @@ nmap ch gT
 nmap cl gt
 nmap wh H
 nmap wl L
+nmap ws ;open last-fm-artists 
+nmap wS ;tabnew last-fm-artists 
+nmap Ws wS
+nmap WS wS
 nmap wg ;open gmail 
 nmap wG ;tabnew gmail 
 nmap Wg wG
