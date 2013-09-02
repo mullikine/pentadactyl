@@ -138,6 +138,10 @@ nmap ch gT
 nmap cl gt
 nmap wh H
 nmap wl L
+nmap wj ;open jquery-api 
+nmap wJ ;tabnew jquery-api 
+nmap Wj wJ
+nmap WJ wJ
 nmap ws ;open last-fm-artists 
 nmap wS ;tabnew last-fm-artists 
 nmap Ws wS
