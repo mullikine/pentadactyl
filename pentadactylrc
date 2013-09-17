@@ -246,8 +246,12 @@ if config.profileName == "movies"
     set defsearch=imdb
 endif
 
-if config.profileName == "aoe2w" || config.profileName == "aoe2m"
+if config.profileName == "aoe2w" || config.profileName == "aoe2m" || config.profileName == "trac"
     set guioptions+=B
+endif
+
+if config.profileName == "trac"
+    set! browser.startup.homepage="http://trac/"
 endif
 
 "set editor='gvim -f +<line> +"sil! call cursor(0, <column>)" <file>'
