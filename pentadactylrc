@@ -252,6 +252,10 @@ if config.profileName == "trac"
     set! browser.startup.homepage="http://trac/"
 endif
 
+if config.profileName == "tracmap-network"
+    set! browser.startup.homepage="http://172.21.21.253/"
+endif
+
 "set editor='gvim -f +<line> +"sil! call cursor(0, <column>)" <file>'
 "gvim.sh does not like the above double quotes. that's why the above doesn't work
 "set editor="gvim -f +<line> +'sil! call cursor(0, <column>)' +'set ft=html' <file>"
