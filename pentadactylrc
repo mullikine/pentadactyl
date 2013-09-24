@@ -68,7 +68,8 @@ set! bym.text="#666666"
 set! bym.usc="0"
 set! bym.vlink="#666666"
 set! layout.spellcheckDefault=0
-set guioptions=B
+
+set guioptions='B'
 
 silent extdisable Ubuntu Firefox Modifications
 silent extdisable Ubuntu Online Accounts
@@ -134,7 +135,6 @@ colorscheme zenburn
 
 map -builtin ; :
 map -builtin : ;
-set go=
 set showtabline=never
 nmap ch gT
 nmap cl gt
@@ -295,4 +295,3 @@ if config.profileName == "test-traclink"
     nmap s ;set! javascript.enabled=false<CR>
     nmap w ;set! javascript.enabled=true<CR>
 endif
-
