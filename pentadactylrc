@@ -68,6 +68,7 @@ set! bym.text="#666666"
 set! bym.usc="0"
 set! bym.vlink="#666666"
 set! layout.spellcheckDefault=0
+set guioptions=B
 
 silent extdisable Ubuntu Firefox Modifications
 silent extdisable Ubuntu Online Accounts
@@ -99,6 +100,7 @@ if config.profileName == "web_development" || config.profileName == "traclink"||
 endif
 
 if config.profileName == "web_development"
+    set guioptions=''
     silent extenable Web Developer
     silent extenable CodeBurner for Firebug
 else
@@ -244,10 +246,6 @@ endif
 
 if config.profileName == "movies"
     set defsearch=imdb
-endif
-
-if config.profileName == "aoe2w" || config.profileName == "aoe2m" || config.profileName == "trac"
-    set guioptions+=B
 endif
 
 if config.profileName == "trac"
