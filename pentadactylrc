@@ -133,8 +133,41 @@ endif
 
 colorscheme zenburn
 
+"js $(window)._document.body.contentEditable=true
+
+nnoremap <ESC> <ESC><ESC>:js content.document.body.contentEditable=false<CR>
+vnoremap <ESC> <ESC><ESC>:js content.document.body.contentEditable=false<CR>
+inoremap <ESC> <ESC><ESC>:js content.document.body.contentEditable=false<CR>
+tnoremap <ESC> <ESC><ESC>:js content.document.body.contentEditable=false<CR>
+onoremap <ESC> <ESC><ESC>:js content.document.body.contentEditable=false<CR>
+
+nnoremap <C-[> <ESC><ESC>:js content.document.body.contentEditable=false<CR>
+vnoremap <C-[> <ESC><ESC>:js content.document.body.contentEditable=false<CR>
+inoremap <C-[> <ESC><ESC>:js content.document.body.contentEditable=false<CR>
+tnoremap <C-[> <ESC><ESC>:js content.document.body.contentEditable=false<CR>
+onoremap <C-[> <ESC><ESC>:js content.document.body.contentEditable=false<CR>
+
+set insertmode
+"noremap i ;js content.document.body.contentEditable=true<BAR>normal i
+nnoremap <C-i> :js content.document.body.contentEditable=true<CR>i:<CR><TAB><C-i>
+vnoremap <C-i> <ESC><ESC>:js content.document.body.contentEditable=true<CR>i:<CR><TAB><C-i>
+"inoremap <C-i> <ESC><ESC>:js content.document.body.contentEditable=true<CR>i:<CR><TAB><C-i>
+nnoremap <C-i> <ESC><ESC>:js content.document.body.contentEditable=true<CR>i:<CR><TAB><C-i>
+tnoremap <C-i> <ESC><ESC>:js content.document.body.contentEditable=true<CR>i:<CR><TAB><C-i>
+onoremap <C-i> <ESC><ESC>:js content.document.body.contentEditable=true<CR>i:<CR><TAB><C-i>
+nmap <F4> ;exec "tabopen http://lifehacker.com/tag/" + config.profileName<CR>
+nmap <F5> ;exec "tabopen http://" + config.profileName +".stackexchange.com/"<CR>
+"nmap <F4> ;exec "tabopen google site:lifehacker.com " + config.profileName<CR>
+nmap -b j 5j
+nmap -b k 5k
+nmap -b h 5h
+nmap -b l 5l
 map -builtin ; :
 map -builtin : ;
+nmap K ;bmarks! 
+" A) This doesn't do what you want
+" B) k is mapped to ‘up’
+"nmap k ;bmarks! -title 
 set showtabline=never
 nmap ch gT
 nmap cl gt
@@ -206,7 +239,6 @@ nmap Wt ;tabnew http://www.hoyts.co.nz/movies/now_on_sale.aspx<CR>
 nmap wl ;open http://www.rialto.co.nz/cinemas/rialto-cinemas-dunedin.aspx<CR>
 nmap wL ;tabnew http://www.rialto.co.nz/cinemas/rialto-cinemas-dunedin.aspx<CR>
 nmap Wl ;tabnew http://www.rialto.co.nz/cinemas/rialto-cinemas-dunedin.aspx<CR>
-nmap X x<CR>
 map <C-k> <Nop>
 "map! <C-k> <Nop>
 
@@ -232,6 +264,14 @@ if config.profileName == "non-secure"
     "set! network.proxy.socks="localhost"
     "set! network.proxy.socks_port=9050
     "set! network.proxy.type=0
+endif
+
+if config.profileName == "jenkins"
+    " adding j and k here to adjust after finding does not work
+    " \r has to be at the end or it will do regex searches every time a
+    " letter is added
+    map \> /( [^0] failure|ProgrammingError:|Started by |Finished:)\r<CR>
+    map \< ?( [^0] failure|ProgrammingError:|Started by |Finished:)\r<CR>
 endif
 
 if config.profileName == "youtube"
@@ -266,12 +306,13 @@ endif
 "set editor="osascript -e 'tell application \"Terminal\" to do script (\"/Users/shane/local/bin/wrappers/pgvim.sh <line> <column> <file>; exit\") activate'"
 set editor="pgvim.sh <line> <column> <file>"
 
-map -g user <C-o> -js $(window)._document.body.contentEditable=$(window)._document.body.contentEditable=='true'?$(window)._document.body.contentEditable='false':$(window)._document.body.contentEditable='true'
-imap <C-o> -js $(window)._document.body.contentEditable=$(window)._document.body.contentEditable=='true'?$(window)._document.body.contentEditable='false':$(window)._document.body.contentEditable='true'
-tmap <C-o> -js $(window)._document.body.contentEditable=$(window)._document.body.contentEditable=='true'?$(window)._document.body.contentEditable='false':$(window)._document.body.contentEditable='true'
-nmap <C-o> -js $(window)._document.body.contentEditable=$(window)._document.body.contentEditable=='true'?$(window)._document.body.contentEditable='false':$(window)._document.body.contentEditable='true'
-vmap <C-o> -js $(window)._document.body.contentEditable=$(window)._document.body.contentEditable=='true'?$(window)._document.body.contentEditable='false':$(window)._document.body.contentEditable='true'
-omap <C-o> -js $(window)._document.body.contentEditable=$(window)._document.body.contentEditable=='true'?$(window)._document.body.contentEditable='false':$(window)._document.body.contentEditable='true'
+"map -g user <C-o> -js $(window)._document.body.contentEditable=$(window)._document.body.contentEditable=='true'?$(window)._document.body.contentEditable='false':$(window)._document.body.contentEditable='true'
+"imap <C-o> -js $(window)._document.body.contentEditable=$(window)._document.body.contentEditable=='true'?$(window)._document.body.contentEditable='false':$(window)._document.body.contentEditable='true'
+"tmap <C-o> -js $(window)._document.body.contentEditable=$(window)._document.body.contentEditable=='true'?$(window)._document.body.contentEditable='false':$(window)._document.body.contentEditable='true'
+"nmap <C-o> -js $(window)._document.body.contentEditable=$(window)._document.body.contentEditable=='true'?$(window)._document.body.contentEditable='false':$(window)._document.body.contentEditable='true'
+"vmap <C-o> -js $(window)._document.body.contentEditable=$(window)._document.body.contentEditable=='true'?$(window)._document.body.contentEditable='false':$(window)._document.body.contentEditable='true'
+"omap <C-o> -js $(window)._document.body.contentEditable=$(window)._document.body.contentEditable=='true'?$(window)._document.body.contentEditable='false':$(window)._document.body.contentEditable='true'
+
 "map -g user <C-l> <ESC><ESC>;open javascript:document.body.contentEditable%20=%20'true';%20document.designMode='on';%20void%200<CR>i<TAB>
 "vmap <C-l> <ESC><ESC>;open javascript:document.body.contentEditable%20=%20'true';%20document.designMode='on';%20void%200<CR>i<TAB>
 "imap <C-l> <ESC><ESC>;open javascript:document.body.contentEditable%20=%20'true';%20document.designMode='on';%20void%200<CR>i<TAB>
@@ -281,11 +322,6 @@ omap <C-o> -js $(window)._document.body.contentEditable=$(window)._document.body
 
 " this doesnt work but probably should
 "toolbarhide 'Add-on Bar'
-
-nmap -b j 5j
-nmap -b k 5k
-nmap -b h 5h
-nmap -b l 5l
 
 set showmode=!caret,!output_multiline,!normal,!base,!operator
 set showstatuslinks=
