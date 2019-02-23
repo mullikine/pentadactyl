@@ -1,5 +1,139 @@
+"style -append * textarea { background-color: black !important; }
+
+" Disable javascript on these url prefixes
+" blocking google search like this still blocks maps
+" A script from this site brought whole computer to freeze. https://s1.wp.com
+" Need to sandbox firefox in an LXC immediately.
+" Then limit cpu and memory for that container.
+set! extensions.yesscript.sites="http://www.forbes.com http://www.google.co.nz/search https://www.google.co.nz/search https://s1.wp.com https://fbstatic-a.akamaihd.net"
+" to unblock google maps
+"set! extensions.yesscript.sites=""
+
+style -append * div[id*='adblock'] { display:none !important; }
+style -append * div[alt*='Marketing'] { display:none !important; }
+
+
+style -append quora.com .vertical_alignment_wrapper { display: none !important; }
+"style -append quora.com .content_page_feed_offset { display: none !important; }
+
+style -append foreignpolicy.com .js-takeover { display: none !important; }
+"style -append foreignpolicy.com .js-takeover { display: block !important; }
+
+
+style -append medium.com .overlay { display: none !important; }
+
+style -append google.com #pmocntr2 { display: none !important; }
+style -append google.com #footer { display: none !important; }
+style -append google.com .gb_d.gb_e { display: none !important; }
+style -append google.com .gb_2b.gb_gc.gb_e { display: none !important; }
+style -append google.com #als { display: none !important; }
+style -append google.com #footcnt { display: none !important; }
+style -append google.com #extrares { display: none !important; }
+style -append google.com #bottomads { display: none !important; }
+style -append google.com #center_col { min-width: 600px !important; margin-left: 60px !important; }
+style -append google.com #localpanelnotices { display: none !important; }
+style -append google.com #lhsf { display: none !important; }
+"" hides the google chrome ad and other stuff
+style -append google.co.nz #pmocntr2 { display: none !important; }
+style -append google.co.nz #footer { display: none !important; }
+style -append google.co.nz .gb_d.gb_e { display: none !important; }
+style -append google.co.nz .gb_2b.gb_gc.gb_e { display: none !important; }
+style -append google.co.nz #als { display: none !important; }
+style -append google.co.nz #footcnt { display: none !important; }
+style -append google.co.nz #extrares { display: none !important; }
+style -append google.co.nz #bottomads { display: none !important; }
+style -append google.co.nz #center_col { min-width: 600px !important; margin-left: 60px !important; }
+style -append google.co.nz #localpanelnotices { display: none !important; }
+style -append google.co.nz #lhsf { display: none !important; }
+"style -append google.co.nz #viewport { background: black !important; }
+"style -append google.co.nz #main { background: white !important; }
+style -append google.co.nz .rhsvw.kno-ftr { display: none !important; }
+style -append google.co.nz ._un._yc._ho { display: none !important; }
+style -append youtube.com #footer-container { display: none !important; }
+style -append youtube.com #body-container { padding-bottom: 0 !important; }
+style -append youtube.com #body-container { padding-bottom: 0 !important; }
+"style -append en.wikipedia.org p { font-size:15px !important; }
+"style -append steamcommunity.com div.content { font-size:16px !important; }
+"style -append steamcommunity.com div.commentthread_comment_text { font-size:16px !important; }
+"style -append div { line-height: 1.2em !important; }
+"style -append math.brown.edu p { line-height: 1.2em !important; }
+" 2015 wiki fundraiser
+style -append * *[id*='frbanner'] { display:none !important; }
+" 2014 wiki fundraiser
+style -append en.wikipedia.org #B14_123010_5C_tp_tx_2dy { display: none !important; }
+" wiki
+style -append en.wikipedia.org .ambox.ambox-content { display: none !important; }
+style -append steamcommunity.com div.forum_topic { height:60px !important; }
+style -append en.wikipedia.org .ambox.ambox-content { display: none !important; }
+style -append elsevier.com * { outline:none !important; }
+style -append elsevier.com * { outline-style:none !important; }
+style -append en.wikipedia.org #mw-navigation { display:none !important; }
+style -append en.wikipedia.org body { text-align:center !important; }
+style -append en.wikipedia.org div#content { border-width: 1px 1px 1px 1px !important; display: inline-block; text-align:left !important; margin:0 !important; max-width: 44em; }
+style -append en.wikipedia.org #mw-navigation { display:none !important; }
+style -append en.wikipedia.org #mw-head-base { display:none !important; }
+style -append en.wikipedia.org #mw-page-base { display:none !important; }
+style -append en.wikipedia.org #footer { display:none !important; }
+style -append en.wikipedia.org #siteSub { display:none !important; }
+style -append news.ycombinator.com a[id*='up_'] { display:none !important; }
+style -append blackboard.otago.ac.nz #topTabs { background-color: white !important }
+style -append en.wikipedia.org .cn-fundraising { display:none }
+style -append en.wikipedia.org #siteNotice { display:none }
+style -append stackoverflow.com #sidebar { display:none }
+"style -append stackoverflow.com #question { display:none }
+style -append stackoverflow.com #question { display:block }
+style -append stackoverflow.com #careers3 { display:none }
+style -append stackoverflow.com #herobox-mini { display:none }
+style -append stackoverflow.com .subheader { display:none }
+style -append stackoverflow.com #footer { display:none }
+style -append stackoverflow.com form#post-form { display:none }
+style -append stackoverflow.com h2.bottom-notice { display:none }
+style -append quora.com div[id*='_modal_signup_wrapper'] { display:none }
+
+style -append phys.org section.notice { display:none !important }
+style -append phys.org section#slick-social { display:none !important }
+
+" make wikipedia image viewer nicer
+style -append en.wikipedia.org div.mw-mmv-above-fold { display:none !important; }
+style -append en.wikipedia.org div.mw-mmv-image-metadata { display:none !important; }
+style -append en.wikipedia.org div.mw-mmv-image-wrapper { bottom:0 !important; }
+
+style -append www.eventfinda.co.nz div.module.description { display:none }
+style -append www.eventfinda.co.nz div.module.details { display:none }
+style -append www.eventfinda.co.nz div.module.share { display:none }
+style -append www.eventfinda.co.nz div.module.gallery { display:none }
+style -append www.eventfinda.co.nz div.module.superfeature { display:none }
+style -append www.eventfinda.co.nz div.container>div.row+div.row { display:none }
+style -append www.eventfinda.co.nz div.container>div.row+div.row+div.row { display:block }
+
+style -append www.beercellar.co.nz #g-mixed-packs { display:none }
+style -append www.beercellar.co.nz #TB_overlay { display:none }
+style -append www.beercellar.co.nz #TB_window { display:none !important }
+
+" This is to deal with the max font size problem
+" It can be smaller than the min font size! which is perfect! because
+" the bookmarks bar and pentadactyl appear fine at this font size
+style -append * * { font-size: 12px !important }
+" Not sure if I should do this:
+style -append * * { font-family: Ubuntu !important }
+
+"somehow reenable aokts submit button
+"$('#fieldId').attr('disabled', 'disabled')
+
+set! browser.display.background_color="#ffffff"
+set! browser.display.document_color_use=0
+set! browser.display.foreground_color="#111111"
+set! mousewheel.with_control.action=1
+set! network.protocol-handler.external.voobly=true
+set! network.protocol-handler.expose.voobly=false
+set! network.protocol-handler.app.voobly="/home/shane/local/bin/voobly-internet-protocol.sh"
+" meant to allow untrusted connections but doesn't work
+"set! browser.ssl_override_behavior=1
+set! browser.ssl_override_behavior=2
 set! javascript.enabled=true
 set! network.http.use-cache=true
+set! extensions.greasemonkey.stats.optin=false
+set! extensions.greasemonkey.stats.prompted=true
 set! extensions.shownSelectionUI=true
 set! extensions.autoDisableScopes=6
 set! extensions.checkCompatibility=false
@@ -23,10 +157,16 @@ set! browser.startup.page=3
 set! font.default.x-western=sans-serif
 set! font.name.sans-serif.x-western=Ubuntu
 set! font.name.serif.x-western=Ubuntu
+"set! font.default.x-western=monospace
+"set! font.name.sans-serif.x-western=monospace
+"set! font.name.serif.x-western=monospace
 set! browser.download.dir=/home/shane/home/downloads
 set! browser.download.lastDir=/home/shane/home/downloads
+set! browser.download.folderList=2
+set! extensions.fnvfox.general.downloads.downloadsFolder=/home/shane/downloads
 set! extensions.dactyl.original.browser.tabs.loadInBackground=true
 set! extensions.dactyl.saved.browser.tabs.loadInBackground=true
+set! browser.download.useDownloadDir=true
 set! browser.sessionstore.resume_from_crash=true
 set! browser.download.manager.scanWhenDone=false
 set! privacy.clearOnShutdown.cache=false
@@ -51,9 +191,22 @@ set! browser.download.manager.showWhenStarting=false
 set! browser.download.manager.showAlertOnComplete=false
 set! browser.download.manager.retention=2
 set! plugins.hide_infobar_for_outdated_plugin=true
-set! nightly.templates.title="${Name}${Version} ${Profile}"
+set! nightly.templates.title="FFx ${Version} ${Profile}"
 set! network.prefetch-next=false
 set! network.proxy.socks_remote_dns=true
+"set! network.proxy.backup.ftp=""
+"set! network.proxy.backup.socks=""
+"set! network.proxy.backup.ssl=""
+"set! network.proxy.ftp=""
+"set! network.proxy.ftp_port=0
+"set! network.proxy.http=""
+"set! network.proxy.http_port=0
+"set! network.proxy.socks=""
+"set! network.proxy.socks_port=0
+"set! network.proxy.socks_remote_dns=true
+"set! network.proxy.ssl=""
+"set! network.proxy.ssl_port=0
+set! flashblock.whitelist="youtube.com"
 set! bym.bkg="#FFFFFF"
 set! bym.form=true
 set! bym.fxbkg="#FFFFFF"
@@ -61,56 +214,156 @@ set! bym.fxlink="#000099"
 set! bym.fxtext="#000000"
 set! bym.fxvlink="#993399"
 set! bym.key="B"
-set! bym.link="#999999"
-" do not want to enable bym every time i start firefox
-"set! bym.status="1"
-set! bym.text="#666666"
+set! bym.link="#272788"
+set! bym.text="#272727"
 set! bym.usc="0"
-set! bym.vlink="#666666"
+set! bym.vlink="#278827"
+" do not want to enable bym every time i start firefox
+" actually I do
+set! bym.status="0"
+"" light on dark
+"set! bym.bkg="#000000"
+"set! bym.form=true
+"set! bym.fxbkg="#000000"
+"set! bym.fxlink="#FFFF66"
+"set! bym.fxtext="#FFFFFF"
+"set! bym.fxvlink="#66CC66"
+"set! bym.key="B"
+"set! bym.link="#D8D877"
+"set! bym.text="#D8D8D8"
+"set! bym.usc="0"
+"set! bym.vlink="#D877D8"
+"" do not want to enable bym every time i start firefox
+"" actually I do
+"set! bym.status="1"
 set! layout.spellcheckDefault=0
+set! security.dialog_enable_delay=0
+set! browser.tabs.animate=false
+set! browser.panorama.animate_zoom=false
+set! browser.fullscreen.animateUp=0
+set! font.minimum-size.x-western=15
+"set! font.minimum-size.x-western=8
+set! font.size.fixed.x-western=18
+set! font.size.variable.x-western=18
+set! browser.display.use_document_fonts=0
+"set! browser.display.use_document_fonts=1
+set! accessibility.blockautorefresh=false
+set! geo.enabled=false
+" https://support.mozilla.org/en-US/questions/981640
+" to disable images, set = 1
+set! permissions.default.image=0
+set! datareporting.healthreport.service.firstRun=false
+
+set! browser.cache.memory.enable=false
+set! browser.cache.disk.enable=false
 
 set guioptions='B'
+" doesn't do anything work
+"set iskeyword='[^\s.,!?:;/"''^$%&?()[\]{}<>#*+|=~_]'
 
-silent extdisable Ubuntu Firefox Modifications
-silent extdisable Ubuntu Online Accounts
-silent extdisable Unity Desktop Integration
-silent extdisable Unity Websites integration
-silent extdisable 0 jQuery
-silent extenable Nightly Tester Tools
-silent extenable Adblock Plus
-silent extenable Blank Your Monitor + Easy Reading
-silent extenable CSS Reloader
-silent extenable keyconfig
-silent extenable Search By Image (by Google)
-silent extenable User Agent Switcher
-silent extenable Session Manager
-silent extenable Google Translator for Firefox
-silent extenable DNS Flusher
-silent extdisable Flash and Video Download
-silent extdisable DownloadHelper
-silent extdisable Tab Mix Plus
+""silent extdisable Shumway
+""silent extdisable Ubuntu Firefox Modifications
+""silent extdisable Ubuntu Online Accounts
+""silent extdisable Unity Desktop Integration
+""silent extdisable Unity Websites integration
+""silent extdisable 0 jQuery
+""silent extenable Nightly Tester Tools
+""silent extenable Adblock Plus
+/* ""silent extenable Blank Your Monitor + Easy Reading */
+""silent extenable CSS Reloader
+""silent extenable keyconfig
+""silent extenable Search By Image (by Google)
+""silent extenable User Agent Switcher
+""silent extenable Session Manager
+""silent extenable Google Translator for Firefox
+""silent extenable DNS Flusher
+""silent extenable Bookmark Shortcut Keys
+""silent extdisable Flash and Video Download
+""silent extdisable DownloadHelper
+""silent extdisable Tab Mix Plus
+""silent extenable Flashblock
+""silent extenable Remember Passwords
+""silent extenable Saved Password Editor
+""silent extenable Personas Plus
+""silent extdisable Pterosaur
 
-if config.profileName == "facebook_kiana"
-    silent extenable Personas
-else
-    silent extdisable Personas
+" This must've been an extension to pentadactyl I made... Very useful.
+" Whoa, I'm awesome!
+" https://gist.github.com/mullikine/8b9cb6a1c843fbfc3109
+set defsearchtext=""
+
+if config.profileName == "forget"
+    "set private
+    set! browser.privatebrowsing.autostart=true
+    "set defsearch=dogpile
+
+    "silent extdisable Blank Your Monitor + Easy Reading
+    "silent extdisable Bookmark Shortcut Keys
+    "silent extdisable CSS Reloader
+    "silent extdisable DNS Flusher
+    "silent extdisable Firesizer
+    "silent extdisable Flashblock
+    "silent extdisable Google Translator for Firefox
+    "silent extdisable Greasemonkey
+    "silent extdisable keyconfig
+    "silent extenable Nightly Tester Tools
+    "silent extdisable Personas Plus
+    "silent extdisable Print Edit
+    "silent extdisable Remember Passwords
+    "silent extdisable Saved Password Editor
+    "silent extdisable Search By Image (by Google)
+    "silent extdisable User Agent Switcher
+    "silent extdisable YesScript
 endif
 
-if config.profileName == "web_development" || config.profileName == "traclink"|| config.profileName == "traclink-dev" || config.profileName == "test-traclink"
+"if config.profileName == "facebook_kiana"
+"    silent extenable Personas
+"else
+"    silent extdisable Personas
+"endif
+"
+"if config.profileName == "ads"
+"    silent extdisable Adblock Plus
+"endif
+
+if config.profileName == "pdf" || config.profileName == "weather"
+    set! font.minimum-size.x-western=8
+    set! font.size.fixed.x-western=12
+    set! font.size.variable.x-western=12
+endif
+
+if config.profileName == "web-development-webdev-wdev" || config.profileName == "traclink"|| config.profileName == "traclink-dev" || config.profileName == "test-traclink"
     set! network.http.use-cache=false
 endif
 
-if config.profileName == "web_development"
-    set guioptions=''
-    silent extenable Web Developer
-    silent extenable CodeBurner for Firebug
-else
-    silent extdisable Web Developer
-    silent extdisable CodeBurner for Firebug
+"if config.profileName == "web-development-webdev-wdev"
+"    "set guioptions=''
+"    silent extenable Web Developer
+"    silent extenable CodeBurner for Firebug
+"else
+"    so ~/.pentadactyl/stylesheets/user.css
+"    silent extdisable Web Developer
+"    silent extdisable CodeBurner for Firebug
+"endif
+"
+"if config.profileName == "web-development-webdev-wdev" || config.profileName == "kaicar"
+"    silent extenable Pencil
+"else
+"    silent extdisable Pencil
+"endif
+
+if config.profileName == "kaicar" || config.profileName == "word-processing"
+    set! font.minimum-size.x-western=8
+    set! font.size.fixed.x-western=14
+    set! font.size.variable.x-western=14
+    set! network.http.use-cache=false
 endif
 
+set! font.minimum-size.x-western=13
+set! font.size.fixed.x-western=13
+set! font.size.variable.x-western=13
+
 if config.profileName == "traclink" || config.profileName == "traclink-dev" || config.profileName == "test-traclink"
-    set! browser.display.use_document_fonts=0
     "set! font.minimum-size.x-western=16
     set! font.minimum-size.x-western=13
     set! font.size.fixed.x-western=16
@@ -125,43 +378,85 @@ if config.profileName == "traclink" || config.profileName == "traclink-dev" || c
     silent extdisable DNS Flusher
     silent extdisable DownloadHelper
     silent extdisable Flash and Video Download
-else
-    set! font.minimum-size.x-western=15
-    set! font.size.fixed.x-western=18
-    set! font.size.variable.x-western=18
 endif
 
-colorscheme zenburn
+" colorscheme shane
 
 "js $(window)._document.body.contentEditable=true
 
-nnoremap <ESC> <ESC><ESC>:js content.document.body.contentEditable=false<CR>
-vnoremap <ESC> <ESC><ESC>:js content.document.body.contentEditable=false<CR>
-inoremap <ESC> <ESC><ESC>:js content.document.body.contentEditable=false<CR>
-tnoremap <ESC> <ESC><ESC>:js content.document.body.contentEditable=false<CR>
-onoremap <ESC> <ESC><ESC>:js content.document.body.contentEditable=false<CR>
+nmap -builtin <C-p> :emenu Edit.Preferences<CR>
 
-nnoremap <C-[> <ESC><ESC>:js content.document.body.contentEditable=false<CR>
-vnoremap <C-[> <ESC><ESC>:js content.document.body.contentEditable=false<CR>
-inoremap <C-[> <ESC><ESC>:js content.document.body.contentEditable=false<CR>
-tnoremap <C-[> <ESC><ESC>:js content.document.body.contentEditable=false<CR>
-onoremap <C-[> <ESC><ESC>:js content.document.body.contentEditable=false<CR>
+nmap -builtin <C-d> :set scroll=0<CR><C-d>
+nmap -builtin <C-u> :set scroll=0<CR><C-u>
+
+" swap C-t and C-y, as I have done with vim
+nmap -builtin <C-t> <C-y>
+nmap -builtin <C-y> <C-t>
+
+map -builtin T t<CR>
+
+nmap -builtin <ESC> <ESC><ESC>:js content.document.body.contentEditable=false<CR>
+vmap -builtin <ESC> <ESC><ESC>:js content.document.body.contentEditable=false<CR>
+imap -builtin <ESC> <ESC><ESC>:js content.document.body.contentEditable=false<CR>
+tmap -builtin <ESC> <ESC><ESC>:js content.document.body.contentEditable=false<CR>
+omap -builtin <ESC> <ESC><ESC>:js content.document.body.contentEditable=false<CR>
+
+nmap -builtin <C-[> <ESC><ESC>:js content.document.body.contentEditable=false<CR>
+vmap -builtin <C-[> <ESC><ESC>:js content.document.body.contentEditable=false<CR>
+imap -builtin <C-[> <ESC><ESC>:js content.document.body.contentEditable=false<CR>
+tmap -builtin <C-[> <ESC><ESC>:js content.document.body.contentEditable=false<CR>
+omap -builtin <C-[> <ESC><ESC>:js content.document.body.contentEditable=false<CR>
 
 set insertmode
-"noremap i ;js content.document.body.contentEditable=true<BAR>normal i
-nnoremap <C-i> :js content.document.body.contentEditable=true<CR>i:<CR><TAB><C-i>
-vnoremap <C-i> <ESC><ESC>:js content.document.body.contentEditable=true<CR>i:<CR><TAB><C-i>
-"inoremap <C-i> <ESC><ESC>:js content.document.body.contentEditable=true<CR>i:<CR><TAB><C-i>
-nnoremap <C-i> <ESC><ESC>:js content.document.body.contentEditable=true<CR>i:<CR><TAB><C-i>
-tnoremap <C-i> <ESC><ESC>:js content.document.body.contentEditable=true<CR>i:<CR><TAB><C-i>
-onoremap <C-i> <ESC><ESC>:js content.document.body.contentEditable=true<CR>i:<CR><TAB><C-i>
-nmap <F4> ;exec "tabopen http://lifehacker.com/tag/" + config.profileName<CR>
-nmap <F5> ;exec "tabopen http://" + config.profileName +".stackexchange.com/"<CR>
+"map -builtin i ;js content.document.body.contentEditable=true<BAR>normal i
+nmap -builtin <C-i> :js content.document.body.contentEditable=true<CR>i:<CR><TAB><C-i>
+vmap -builtin <C-i> <ESC><ESC>:js content.document.body.contentEditable=true<CR>i:<CR><TAB><C-i>
+"imap -builtin <C-i> <ESC><ESC>:js content.document.body.contentEditable=true<CR>i:<CR><TAB><C-i>
+nmap -builtin <C-i> <ESC><ESC>:js content.document.body.contentEditable=true<CR>i:<CR><TAB><C-i>
+tmap -builtin <C-i> <ESC><ESC>:js content.document.body.contentEditable=true<CR>i:<CR><TAB><C-i>
+omap -builtin <C-i> <ESC><ESC>:js content.document.body.contentEditable=true<CR>i:<CR><TAB><C-i>
+
+"if config.profileName != "localhost"
+"    nmap s ;exec "normal ;open google hi" + config.profileName
+"    nmap S ;exec "normal ;tabopen google " + config.profileName
+"endif
+
+
+" google search with profile name
+nmap Zs zS
+nmap ZS zS
+
+nmap <F1> ;exec "tabopen builtwith " + buffer.URL<CR>
+nmap <F2> ;exec "tabopen subreddit-search " + config.profileName<CR>
+"nmap <F3> ;exec "tabopen http://lifehacker.com/tag/" + config.profileName<CR>
+nmap <F3> ;exec "tabopen stackoverflow-tag " + config.profileName<CR>
+nmap <F4> ;exec "tabopen http://" + config.profileName +".stackexchange.com/"<CR>
+nmap <F5> ;exec "tabopen google-translate-auto-english-url " + buffer.URL<CR>
+nmap <F6> ;exec "tabopen stackexchange " + config.profileName<CR>
+
+" too annoying
+"map e ;silent !bash -c "gvim.sh ~/.pentadactylrc&disown"<CR>
+
+"map go ;silent exec "!shortenurl.sh " + buffer.URL<CR>
+map go y;silent exec "!shortenurl.sh"<CR>
+
+"doesn't work. too fast
+"nmap -builtin <C-1> :tabnew<CR><C-1>
+
+nmap ca gl
+nmap cm gl
+
+cmap <C-f> <C-i>
+
 "nmap <F4> ;exec "tabopen google site:lifehacker.com " + config.profileName<CR>
 nmap -b j 5j
 nmap -b k 5k
 nmap -b h 5h
 nmap -b l 5l
+" swap p with P
+map -builtin p P
+map -builtin P p
+" swap ; with :
 map -builtin ; :
 map -builtin : ;
 nmap K ;bmarks! 
@@ -171,76 +466,138 @@ nmap K ;bmarks!
 set showtabline=never
 nmap ch gT
 nmap cl gt
+nmap cz gT
+nmap cx gt
 nmap wh H
 nmap wl L
-nmap wj ;open jquery-api 
-nmap wJ ;tabnew jquery-api 
+nmap w/ ;tabopen google-images 
+nmap w? ;open google-images 
+nmap W/ w?
+nmap W? w?
+nmap wj ;tabopen jquery-api 
+nmap wJ ;open jquery-api 
 nmap Wj wJ
 nmap WJ wJ
-nmap ws ;open last-fm-artists 
-nmap wS ;tabnew last-fm-artists 
+"nmap ws ;tabopen last-fm-artists 
+"nmap wS ;open last-fm-artists 
+nmap ws ;tabopen sciencedirect 
+nmap wS ;open sciencedirect 
 nmap Ws wS
 nmap WS wS
-nmap wg ;open gmail 
-nmap wG ;tabnew gmail 
+nmap wt ;tabopen metacritic 
+nmap wT ;open metacritic 
+nmap Wt wT
+nmap WT wT
+nmap wv ;tabopen gmail 
+nmap wV ;open gmail 
+nmap Wv wV
+nmap WV wV
+nmap wg ;tabopen google 
+nmap wG ;open google 
 nmap Wg wG
 nmap WG wG
-nmap wp ;open project-free-tv 
-nmap wP ;tabnew project-free-tv 
+nmap wp ;tabopen project-free-tv 
+nmap wP ;open project-free-tv 
+nmap Wo wO
+nmap WO wO
+nmap wo ;tabopen wordincontext-en 
+nmap wO ;open wordincontext-en 
 nmap Wp wP
 nmap WP wP
-nmap wf ;open facebook 
-nmap wF ;tabnew facebook 
+nmap wf ;tabopen facebook 
+nmap wF ;open facebook 
 nmap Wf wF
 nmap WF wF
-nmap wy ;open youtube 
-nmap wY ;tabnew youtube 
+nmap wy ;tabopen youtube 
+nmap wY ;open youtube 
 nmap Wy wY
 nmap WY wY
-nmap wa ;open wolfram-alpha 
-nmap wA ;tabnew wolfram-alpha 
+nmap wa ;tabopen wolfram-alpha 
+nmap wA ;open wolfram-alpha 
 nmap Wa wA
 nmap WA wA
-nmap wk ;open wikipedia-en 
-nmap wK ;tabnew wikipedia-en 
+nmap wk ;tabopen wikipedia-en 
+nmap wK ;open wikipedia-en 
 nmap Wk wK
 nmap WK wK
-nmap wq ;open google-i-m-feeling-lucky 
-nmap wQ ;tabnew google-i-m-feeling-lucky 
+nmap wq ;tabopen google-i-m-feeling-lucky 
+nmap wQ ;open google-i-m-feeling-lucky 
 nmap Wq wQ
 nmap WQ wQ
-nmap we ;open thepiratebay-ssl 
-nmap wE ;tabnew thepiratebay-ssl 
+"nmap we ;tabopen the-pirate-bay-search-by-isohunt 
+"nmap wE ;open the-pirate-bay-search-by-isohunt 
+nmap we ;tabopen thepiratebay-ssl 
+nmap wE ;open thepiratebay-ssl 
+"nmap we ;tabopen kickasstorrents-by-seeders 
+"nmap wE ;open kickasstorrents-by-seeders 
+"nmap we ;tabopen isohunt-sort-by-by-seeders 
+"nmap wE ;open isohunt-sort-by-by-seeders 
 nmap We wE
 nmap WE wE
-nmap wr ;open trade-me-nz 
-nmap wR ;tabnew trade-me-nz 
+nmap wr ;tabopen trade-me-nz 
+nmap wR ;open trade-me-nz 
 nmap Wr wR
 nmap WR wR
-nmap wb ;open bbc-news 
-nmap wB ;tabnew bbc-news 
+nmap wb ;tabopen bbc-news 
+nmap wB ;open bbc-news 
 nmap Wb wB
 nmap WB wB
-nmap wm ;open google-maps-nz 
-nmap wM ;tabnew google-maps-nz 
+nmap wm ;tabopen google-maps-nz 
+nmap wM ;open google-maps-nz 
 nmap Wm wM
 nmap WM wM
-nmap wu ;open urban-dictionary 
-nmap wU ;tabnew urban-dictionary 
+"nmap wd ;tabopen <Up><Home><C-Right><C-Right><C-W>wiktionary-en<Right>
+"nmap wD ;open <Up><Home><C-Right><C-Right><C-W>wiktionary-en<Right>
+"nmap wd ;tabopen wiktionary-en 
+"nmap wD ;open wiktionary-en 
+nmap wn ;tabopen google-ngram-viewer 
+nmap wN ;open google-ngram-viewer 
+nmap Wn wN
+nmap WN wN
+nmap wd ;tabopen vocabulary 
+nmap wD ;open vocabulary 
+nmap Wd wD
+nmap WD wD
+nmap wu ;tabopen command-line-fu 
+nmap wU ;open command-line-fu 
 nmap Wu wU
 nmap WU wU
-nmap wi ;open imdb 
-nmap wI ;tabnew imdb 
+"nmap wu ;tabopen urban-dictionary 
+"nmap wU ;open urban-dictionary 
+"nmap Wu wU
+"nmap WU wU
+nmap wi ;tabopen imdb 
+"nmap wi ;tabopen <Up><Home><C-Right><C-Right><C-W>imdb<Right>
+nmap wI ;open imdb 
+"nmap wI ;open <Up><Home><C-Right><C-Right><C-W>imdb<Right>
 nmap Wi wI
 nmap WI wI
-nmap wt ;open http://www.hoyts.co.nz/movies/now_on_sale.aspx<CR>
-nmap wT ;tabnew http://www.hoyts.co.nz/movies/now_on_sale.aspx<CR>
-nmap Wt ;tabnew http://www.hoyts.co.nz/movies/now_on_sale.aspx<CR>
-nmap wl ;open http://www.rialto.co.nz/cinemas/rialto-cinemas-dunedin.aspx<CR>
-nmap wL ;tabnew http://www.rialto.co.nz/cinemas/rialto-cinemas-dunedin.aspx<CR>
-nmap Wl ;tabnew http://www.rialto.co.nz/cinemas/rialto-cinemas-dunedin.aspx<CR>
+nmap wc ;tabopen ncbi-pubchem-compound 
+nmap wC ;open ncbi-pubchem-compound 
+nmap Wc wC
+nmap WC wC
+nmap wl ;tabopen sharelatex 
+nmap wL ;open sharelatex 
+nmap Wl wL
+nmap WL wL
+""nmap wt ;tabopen http://www.hoyts.co.nz/movies/now_on_sale.aspx<CR>
+""nmap wT ;open http://www.hoyts.co.nz/movies/now_on_sale.aspx<CR>
+""nmap Wt ;tabopen http://www.hoyts.co.nz/movies/now_on_sale.aspx<CR>
+""nmap wl ;open http://www.rialto.co.nz/cinemas/rialto-cinemas-dunedin.aspx<CR>
+""nmap wL ;tabopen http://www.rialto.co.nz/cinemas/rialto-cinemas-dunedin.aspx<CR>
+""nmap Wl ;tabopen http://www.rialto.co.nz/cinemas/rialto-cinemas-dunedin.aspx<CR>
 map <C-k> <Nop>
 "map! <C-k> <Nop>
+"map gi ;tabopen images.google.com 
+"map zgi ;tabopen images.google.com<CR>
+map gi ;tabopen google-images 
+map zgi ;tabopen google-images<CR>
+
+" along with the patch made to pentadactyl. this makes <C-y> act like <C-v>
+map -b <C-y> <S-Insert>
+map -b <C-c> <pass-next-key><C-c>
+"map -b <C-b> <pass-next-key><C-b>
+map -b <C-a> <pass-next-key><C-a>
 
 " can't get this to work
 "switch (liberator.profileName) {
@@ -255,14 +612,14 @@ set! browser.privatebrowsing.autostart=false
 if config.profileName == "non-secure"
     set! bym.status="1"
     " needed for ff 19-
-    set private
+    "set private
     " needed for ff 20+
     set! browser.privatebrowsing.autostart=true
-    set defsearch=dogpile
+    "set defsearch=dogpile
     set! network.prefetch-next=false
     set! network.proxy.socks_remote_dns=true
-    "set! network.proxy.socks="localhost"
-    "set! network.proxy.socks_port=9050
+    set! network.proxy.socks="localhost"
+    set! network.proxy.socks_port=9050
     "set! network.proxy.type=0
 endif
 
@@ -274,18 +631,15 @@ if config.profileName == "jenkins"
     map \< ?( [^0] failure|ProgrammingError:|Started by |Finished:)\r<CR>
 endif
 
-if config.profileName == "youtube"
-    set defsearch=youtube
-endif
-
-if config.profileName == "forget"
-    set private
-    set! browser.privatebrowsing.autostart=true
-    set defsearch=dogpile
-endif
+"if config.profileName == "youtube"
+"    set defsearch=youtube
+"endif
 
 if config.profileName == "movies"
-    set defsearch=imdb
+    "set defsearch=imdb
+    set! browser.download.dir=/home/shane/ws/movies/downloads
+    set! browser.download.lastDir=/home/shane/ws/movies/downloads
+    set! extensions.fnvfox.general.downloads.downloadsFolder=/home/shane/ws/movies/downloads
 endif
 
 if config.profileName == "trac"
@@ -331,3 +685,326 @@ if config.profileName == "test-traclink"
     nmap s ;set! javascript.enabled=false<CR>
     nmap w ;set! javascript.enabled=true<CR>
 endif
+
+if config.profileName == "facebook" || config.profileName == "math" || config.profileName == "wikipedia" || config.profileName == "reading"
+    set! browser.display.use_document_fonts=1
+endif
+
+if config.profileName == "pascal"
+    set! browser.download.dir=/home/shane/uni/pascal/downloads
+    set! browser.download.lastDir=/home/shane/uni/pascal/downloads
+    set! extensions.fnvfox.general.downloads.downloadsFolder=/home/shane/uni/pascal/downloads
+endif
+
+if config.profileName == "asm-assembly"
+    set defsearchtext="asm "
+    set! browser.download.dir=/home/shane/ws/asm-assembly/downloads
+    set! browser.download.lastDir=/home/shane/ws/asm-assembly/downloads
+    set! extensions.fnvfox.general.downloads.downloadsFolder=/home/shane/ws/asm-assembly/downloads
+endif
+
+if config.profileName == "musi"
+    set defsearchtext="Music "
+    set! browser.download.dir=/home/shane/uni/musi/downloads
+    set! browser.download.lastDir=/home/shane/uni/musi/downloads
+    set! extensions.fnvfox.general.downloads.downloadsFolder=/home/shane/uni/musi/downloads
+endif
+
+if config.profileName == "biochemistry"
+    set defsearchtext="Biochemistry "
+    set! browser.download.dir=/home/shane/uni/bioc/downloads
+    set! browser.download.lastDir=/home/shane/uni/bioc/downloads
+    set! extensions.fnvfox.general.downloads.downloadsFolder=/home/shane/uni/bioc/downloads
+    silent extdisable Flashblock
+endif
+
+if config.profileName == "genetics"
+    set defsearchtext="Genetics "
+    set! browser.download.dir=/home/shane/uni/gene/downloads
+    set! browser.download.lastDir=/home/shane/uni/gene/downloads
+    set! extensions.fnvfox.general.downloads.downloadsFolder=/home/shane/uni/gene/downloads
+endif
+
+if config.profileName == "biology"
+    set defsearchtext="Biology "
+    set! browser.download.dir=/home/shane/uni/biol/downloads
+    set! browser.download.lastDir=/home/shane/uni/biol/downloads
+    set! extensions.fnvfox.general.downloads.downloadsFolder=/home/shane/uni/biol/downloads
+endif
+
+if config.profileName == "chemistry"
+    set defsearchtext="Chemistry "
+    set! browser.download.dir=/home/shane/uni/chem/downloads
+    set! browser.download.lastDir=/home/shane/uni/chem/downloads
+    set! extensions.fnvfox.general.downloads.downloadsFolder=/home/shane/uni/chem/downloads
+endif
+
+if config.profileName == "maths-mathematics"
+    set! browser.download.dir=/home/shane/uni/math/downloads
+    set! browser.download.lastDir=/home/shane/uni/math/downloads
+    set! extensions.fnvfox.general.downloads.downloadsFolder=/home/shane/uni/math/downloads
+endif
+
+if config.profileName == "chemdraw"
+    set defsearchtext="Chemdraw "
+    set! browser.download.dir=/home/shane/programs/chemdraw/downloads
+    set! browser.download.lastDir=/home/shane/programs/chemdraw/downloads
+    set! extensions.fnvfox.general.downloads.downloadsFolder=/home/shane/programs/chemdraw/downloads
+endif
+
+if config.profileName == "haskell"
+    set defsearchtext="Haskell "
+    nmap wd ;tabopen hoogle 
+    nmap wD ;open hoogle 
+    set! browser.download.dir=/home/shane/ws/haskell/downloads
+    set! browser.download.lastDir=/home/shane/ws/haskell/downloads
+    set! extensions.fnvfox.general.downloads.downloadsFolder=/home/shane/ws/haskell/downloads
+endif
+
+if config.profileName == "xmonad"
+    set defsearchtext="xmonad "
+    nmap wd ;tabopen hoogle 
+    nmap wD ;open hoogle 
+    set! browser.download.dir=/home/shane/ws/xmonad/downloads
+    set! browser.download.lastDir=/home/shane/ws/xmonad/downloads
+    set! extensions.fnvfox.general.downloads.downloadsFolder=/home/shane/ws/xmonad/downloads
+endif
+
+if config.profileName == "zoology"
+    set defsearchtext="Zoology "
+    set! browser.download.dir=/home/shane/uni/zool/downloads
+    set! browser.download.lastDir=/home/shane/uni/zool/downloads
+    set! extensions.fnvfox.general.downloads.downloadsFolder=/home/shane/uni/zool/downloads
+endif
+
+if config.profileName == "queenstown"
+    set defsearchtext="Queenstown "
+    set! browser.download.dir=/home/shane/uni/queenstown/downloads
+    set! browser.download.lastDir=/home/shane/uni/queenstown/downloads
+    set! extensions.fnvfox.general.downloads.downloadsFolder=/home/shane/uni/queenstown/downloads
+endif
+
+if config.profileName == "star-wars-starwars"
+    set defsearchtext="Star Wars "
+    set! browser.download.dir=/home/shane/uni/star-wars/downloads
+    set! browser.download.lastDir=/home/shane/uni/star-wars/downloads
+    set! extensions.fnvfox.general.downloads.downloadsFolder=/home/shane/uni/star-wars/downloads
+endif
+
+if config.profileName == "git"
+    set defsearchtext="git "
+endif
+
+if config.profileName == "opengl"
+    nmap wd ;tabopen opengl 
+    nmap wD ;open opengl 
+    set! browser.download.dir=/home/shane/ws/opengl/downloads
+    set! browser.download.lastDir=/home/shane/ws/opengl/downloads
+    set! extensions.fnvfox.general.downloads.downloadsFolder=/home/shane/ws/opengl/downloads
+endif
+
+if config.profileName == "glsl"
+    nmap wd ;tabopen glsl 
+    nmap wD ;open glsl 
+    set! browser.download.dir=/home/shane/ws/glsl/downloads
+    set! browser.download.lastDir=/home/shane/ws/glsl/downloads
+    set! extensions.fnvfox.general.downloads.downloadsFolder=/home/shane/ws/glsl/downloads
+endif
+
+if config.profileName == "zoro"
+    set defsearchtext="windows "
+    set! browser.download.dir=/home/shane/remote/zoro/vbox-shared/downloads
+    set! browser.download.lastDir=/home/shane/remote/zoro/vbox-shared/downloads
+    set! extensions.fnvfox.general.downloads.downloadsFolder=/home/shane/remote/zoro/vbox-shared/downloads
+endif
+
+if config.profileName == "age-of-empires-aoe"
+    set! browser.download.dir=/home/shane/ws/age-of-empires-aoe/downloads
+    set! browser.download.lastDir=/home/shane/ws/age-of-empires-aoe/downloads
+    set! extensions.fnvfox.general.downloads.downloadsFolder=/home/shane/ws/age-of-empires-aoe/downloads
+endif
+
+if config.profileName == "age-of-kings"
+    set! browser.download.dir=/home/shane/ws/age-of-kings/downloads
+    set! browser.download.lastDir=/home/shane/ws/age-of-kings/downloads
+    set! extensions.fnvfox.general.downloads.downloadsFolder=/home/shane/ws/age-of-kings/downloads
+    nmap <F2> ;exec "tabopen subreddit-search aoe2"<CR>
+endif
+
+if config.profileName == "swgb-galactic-battlegrounds"
+    set! browser.download.dir=/home/shane/ws/star-wars-galactic-battlegrounds-swgb/downloads
+    set! browser.download.lastDir=/home/shane/ws/star-wars-galactic-battlegrounds-swgb/downloads
+    set! extensions.fnvfox.general.downloads.downloadsFolder=/home/shane/ws/star-wars-galactic-battlegrounds-swgb/downloads
+    nmap <F2> ;exec "tabopen subreddit-search swgb"<CR>
+endif
+
+if config.profileName == "finances-bank-bnz"
+    set! browser.download.dir=/home/shane/home/documents/finances/downloads
+    set! browser.download.lastDir==/home/shane/home/documents/finances/downloads
+    set! extensions.fnvfox.general.downloads.downloadsFolder=/home/shane/home/documents/finances/downloads
+endif
+
+if config.profileName == "juju"
+    set! browser.download.dir=/home/shane/ws/juju/downloads
+    set! browser.download.lastDir==/home/shane/ws/juju/downloads
+    set! extensions.fnvfox.general.downloads.downloadsFolder=/home/shane/ws/juju/downloads
+endif
+
+if config.profileName == "cpp-c++"
+    set defsearchtext="c++ "
+    " there's got to be a better way
+    nmap <F3> ;exec "tabopen stackoverflow-tag c++"<CR>
+    nmap <F2> ;exec "tabopen subreddit-search Cplusplus"<CR>
+    nmap wd ;tabopen cplusplus-com 
+    nmap wD ;open cplusplus-com 
+    nmap wd ;tabopen c-reference 
+    nmap wD ;open c-reference 
+endif
+
+if config.profileName == "c"
+    set defsearchtext="c "
+    " there's got to be a better way
+    nmap <F3> ;exec "tabopen stackoverflow-tag c"<CR>
+    nmap <F2> ;exec "tabopen subreddit-search C"<CR>
+    nmap wd ;tabopen c-reference 
+    nmap wD ;open c-reference 
+endif
+
+if config.profileName == "sql-server"
+    set defsearchtext="sql server "
+endif
+
+if config.profileName == "visual-c++-vc++-vcpp"
+    set defsearchtext="vc++ "
+    " there's got to be a better way
+    nmap <F3> ;exec "tabopen stackoverflow-tag vc++"<CR>
+    nmap wd ;tabopen cplusplus-com 
+    nmap wD ;open cplusplus-com 
+endif
+
+if config.profileName == "bat-batch"
+    set defsearchtext="bat file "
+endif
+
+if config.profileName == "python"
+    set defsearchtext="python "
+    nmap wd ;tabopen python-docs-2-7 
+    nmap wD ;open python-docs-2-7 
+endif
+
+if config.profileName == "ruby"
+    set defsearchtext="ruby "
+    nmap wd ;tabopen ruby-core 
+    nmap wD ;open ruby-core 
+endif
+
+if config.profileName == "php"
+    set defsearchtext="php "
+    nmap wd ;tabopen php-manual 
+    nmap wD ;open php-manual 
+endif
+
+if config.profileName == "latex"
+    set defsearchtext="latex "
+endif
+
+if config.profileName == "dwarf-fortress"
+    set defsearchtext="dwarf fortress "
+endif
+
+if config.profileName == "javascript-js"
+    set defsearchtext="javascript "
+    nmap wd ;tabopen w3schools-javascript-reference 
+    nmap wD ;open w3schools-javascript-reference 
+endif
+
+if config.profileName == "jquery"
+    set defsearchtext="jquery "
+    nmap wd ;tabopen w3schools-javascript-reference 
+    nmap wD ;open w3schools-javascript-reference 
+endif
+
+if config.profileName == "c-sharp-c#"
+    set defsearchtext="c# "
+    nmap wd ;tabopen msdn-library-stack-overflow 
+    nmap wD ;open msdn-library-stack-overflow 
+endif
+
+if config.profileName == "github"
+    set defsearchtext="github "
+    nmap wf ;tabopen github 
+    nmap wF ;open github 
+endif
+
+if config.profileName == "mathematica"
+    set defsearchtext="mathematica "
+endif
+
+if config.profileName == "gluten-free"
+    set defsearchtext="gluten free "
+endif
+
+if config.profileName == "tcl-tickle"
+    set defsearchtext="tcl "
+endif
+
+if config.profileName == "uni-otago"
+    set defsearchtext="otago "
+endif
+
+if config.profileName == "dunedin"
+    set defsearchtext="dunedin "
+endif
+
+if config.profileName == "business"
+    nmap wd ;tabopen businessdictionary-com 
+    nmap wD ;open businessdictionary-com 
+endif
+
+if config.profileName == "german"
+    nmap Wo wO
+    nmap WO wO
+    nmap wo ;tabopen wordincontext-de 
+    nmap wO ;open wordincontext-de 
+
+    nmap wd ;tabopen wiktionary-de 
+    nmap wD ;open wiktionary-de 
+    nmap Wd wD
+    nmap WD wD
+
+    set defsearchtext="german "
+endif
+
+"!xdotool search --name "FFx" windowsize 0 0
+"xwininfo -name "FFx 25.0 biochemistry"
+"exec "tabopen subreddit-search " + config.profileName<CR>
+"exec window.outerHeight=720
+"exec window.outerWidth=630
+
+" need a command to get and set the window size
+
+"exec "window.outerWidth=io.system('echo 50')"
+"let width=system('echo 50)
+"js "window.outerWidth=" . width
+
+ "nmap s ;exec "exec 'open google + config.profileName'<CR>"
+ "nmap S ;exec "exec 'tabopen google + config.profileName'<CR>"
+
+ "nmap s ;exec "normal! :open google " + config.profileName<CR>
+
+"Automate browser including the chrome by using pentadactyl:
+"    For example; I use the Webmail Notifier addon to check some online
+"    e-mail accounts. This places an icon in the statusbar which, when
+"    clicked, opens up the webmail login pages, however there is no menu
+"    item for this action. Digging around in the javascript code for the
+"    extension however, I found the function which is called when you
+"    click the icon ('com.tobwithu.wmn.onClick()' in this case). By
+"    mapping a new pentadactyl command ('wmn') to javascript code which
+"    passes a click event to this function, I can now execute the click
+"    action directly from the pentadactyl command line, viz;
+"
+"command! -nargs=1 -complete custom,'["open","Open unread mail"]' wmn -js <<EOF
+"var evt=document.createEvent('MouseEvents');
+"evt.initMouseEvent('click',true,true,document.defaultView,1,0,0,0,0,false,false,false,false,0,null);
+"com.tobwithu.wmn.onClick(evt);
+"EOF
