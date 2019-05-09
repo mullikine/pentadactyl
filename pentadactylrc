@@ -1,24 +1,25 @@
 "style -append * textarea { background-color: black !important; }
 
+" set! javascript.enabled=true
+set! javascript.enabled=false
+
 " Disable javascript on these url prefixes
 " blocking google search like this still blocks maps
 " A script from this site brought whole computer to freeze. https://s1.wp.com
 " Need to sandbox firefox in an LXC immediately.
 " Then limit cpu and memory for that container.
-set! extensions.yesscript.sites="http://www.forbes.com http://www.google.co.nz/search https://www.google.co.nz/search https://s1.wp.com https://fbstatic-a.akamaihd.net"
+set! extensions.yesscript.sites="http://www.forbes.com http://www.google.co.nz/search https://www.google.co.nz/search https://s1.wp.com https://fbstatic-a.akamaihd.net https://mycroftproject.com"
 " to unblock google maps
 "set! extensions.yesscript.sites=""
 
 style -append * div[id*='adblock'] { display:none !important; }
 style -append * div[alt*='Marketing'] { display:none !important; }
 
-
 style -append quora.com .vertical_alignment_wrapper { display: none !important; }
 "style -append quora.com .content_page_feed_offset { display: none !important; }
 
 style -append foreignpolicy.com .js-takeover { display: none !important; }
 "style -append foreignpolicy.com .js-takeover { display: block !important; }
-
 
 style -append medium.com .overlay { display: none !important; }
 
@@ -114,6 +115,7 @@ style -append www.beercellar.co.nz #TB_window { display:none !important }
 " It can be smaller than the min font size! which is perfect! because
 " the bookmarks bar and pentadactyl appear fine at this font size
 style -append * * { font-size: 12px !important }
+style -append * * { font-weight: bold !important }
 " Not sure if I should do this:
 style -append * * { font-family: Ubuntu !important }
 
@@ -130,7 +132,6 @@ set! network.protocol-handler.app.voobly="/home/shane/local/bin/voobly-internet-
 " meant to allow untrusted connections but doesn't work
 "set! browser.ssl_override_behavior=1
 set! browser.ssl_override_behavior=2
-set! javascript.enabled=true
 set! network.http.use-cache=true
 set! extensions.greasemonkey.stats.optin=false
 set! extensions.greasemonkey.stats.prompted=true
@@ -207,35 +208,38 @@ set! network.proxy.socks_remote_dns=true
 "set! network.proxy.ssl=""
 "set! network.proxy.ssl_port=0
 set! flashblock.whitelist="youtube.com"
-set! bym.bkg="#FFFFFF"
-set! bym.form=true
-set! bym.fxbkg="#FFFFFF"
-set! bym.fxlink="#000099"
-set! bym.fxtext="#000000"
-set! bym.fxvlink="#993399"
-set! bym.key="B"
-set! bym.link="#272788"
-set! bym.text="#272727"
-set! bym.usc="0"
-set! bym.vlink="#278827"
+""set! bym.bkg="#FFFFFF"
+"set! bym.bkg="#f7f7f7"
+"set! bym.form=true
+"set! bym.fxbkg="#FFFFFF"
+"set! bym.fxlink="#000099"
+""set! bym.fxtext="#000000"
+"set! bym.fxtext="#111111"
+"set! bym.fxvlink="#993399"
+"set! bym.key="B"
+"set! bym.link="#272788"
+"set! bym.text="#272727"
+"set! bym.usc="0"
+"set! bym.vlink="#278827"
 " do not want to enable bym every time i start firefox
 " actually I do
-set! bym.status="0"
-"" light on dark
-"set! bym.bkg="#000000"
-"set! bym.form=true
-"set! bym.fxbkg="#000000"
-"set! bym.fxlink="#FFFF66"
-"set! bym.fxtext="#FFFFFF"
-"set! bym.fxvlink="#66CC66"
-"set! bym.key="B"
-"set! bym.link="#D8D877"
-"set! bym.text="#D8D8D8"
-"set! bym.usc="0"
-"set! bym.vlink="#D877D8"
+" set! bym.status="0"
+" light on dark
+set! bym.bkg="#333333"
+set! bym.form=true
+set! bym.fxbkg="#000000"
+set! bym.fxlink="#FFFF66"
+set! bym.fxtext="#555555"
+set! bym.fxvlink="#66CC66"
+set! bym.key="B"
+set! bym.link="#D8D877"
+" set! bym.text="#D8D8D8"
+set! bym.text="#666666"
+set! bym.usc="0"
+set! bym.vlink="#D877D8"
 "" do not want to enable bym every time i start firefox
 "" actually I do
-"set! bym.status="1"
+" set! bym.status="1"
 set! layout.spellcheckDefault=0
 set! security.dialog_enable_delay=0
 set! browser.tabs.animate=false
@@ -257,7 +261,9 @@ set! datareporting.healthreport.service.firstRun=false
 set! browser.cache.memory.enable=false
 set! browser.cache.disk.enable=false
 
-set guioptions='B'
+"set guioptions='B'
+"tbh Bookmarks Toolbar
+set guioptions=''
 " doesn't do anything work
 "set iskeyword='[^\s.,!?:;/"''^$%&?()[\]{}<>#*+|=~_]'
 
@@ -269,7 +275,7 @@ set guioptions='B'
 ""silent extdisable 0 jQuery
 ""silent extenable Nightly Tester Tools
 ""silent extenable Adblock Plus
-/* ""silent extenable Blank Your Monitor + Easy Reading */
+silent extenable Blank Your Monitor + Easy Reading
 ""silent extenable CSS Reloader
 ""silent extenable keyconfig
 ""silent extenable Search By Image (by Google)
@@ -291,6 +297,8 @@ set guioptions='B'
 " Whoa, I'm awesome!
 " https://gist.github.com/mullikine/8b9cb6a1c843fbfc3109
 set defsearchtext=""
+
+so ~/.pentadactyl/stylesheets/user.css
 
 if config.profileName == "forget"
     "set private
@@ -362,6 +370,9 @@ endif
 set! font.minimum-size.x-western=13
 set! font.size.fixed.x-western=13
 set! font.size.variable.x-western=13
+
+" I don't currently have an alt key so this is the only way I can enable bym
+" set! bym.status="1"
 
 if config.profileName == "traclink" || config.profileName == "traclink-dev" || config.profileName == "test-traclink"
     "set! font.minimum-size.x-western=16
@@ -468,7 +479,7 @@ nmap ch gT
 nmap cl gt
 nmap cz gT
 nmap cx gt
-nmap wh H
+"nmap wh H
 nmap wl L
 nmap w/ ;tabopen google-images 
 nmap w? ;open google-images 
@@ -478,6 +489,10 @@ nmap wj ;tabopen jquery-api
 nmap wJ ;open jquery-api 
 nmap Wj wJ
 nmap WJ wJ
+nmap wh ;tabopen hoogle 
+nmap wH ;open hoogle 
+nmap Wh wH
+nmap WH wH
 "nmap ws ;tabopen last-fm-artists 
 "nmap wS ;open last-fm-artists 
 nmap ws ;tabopen sciencedirect 
@@ -526,8 +541,8 @@ nmap Wq wQ
 nmap WQ wQ
 "nmap we ;tabopen the-pirate-bay-search-by-isohunt 
 "nmap wE ;open the-pirate-bay-search-by-isohunt 
-nmap we ;tabopen thepiratebay-ssl 
-nmap wE ;open thepiratebay-ssl 
+nmap we ;tabopen the-pirate-bay 
+nmap wE ;open the-pirate-bay 
 "nmap we ;tabopen kickasstorrents-by-seeders 
 "nmap wE ;open kickasstorrents-by-seeders 
 "nmap we ;tabopen isohunt-sort-by-by-seeders 
@@ -676,6 +691,7 @@ set editor="pgvim.sh <line> <column> <file>"
 
 " this doesnt work but probably should
 "toolbarhide 'Add-on Bar'
+toolbarhide Bookmarks Toolbar
 
 set showmode=!caret,!output_multiline,!normal,!base,!operator
 set showstatuslinks=
